@@ -1,2 +1,17 @@
 import java.util.Scanner;
-public class ReverseNumber { public static void main(String[] args){Scanner sc=new Scanner(System.in);long n=sc.nextLong(),x=Math.abs(n),rev=0;while(x>0){rev=rev*10+x%10;x/=10;}System.out.println(n<0?-rev:rev);} }
+
+public class ReverseNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long number = sc.nextLong();
+        long remaining = Math.abs(number);
+        long reversed = 0;
+
+        while (remaining > 0) {
+            reversed = reversed * 10 + remaining % 10;
+            remaining /= 10;
+        }
+
+        System.out.println(number < 0 ? -reversed : reversed);
+    }
+}
