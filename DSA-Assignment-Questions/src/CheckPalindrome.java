@@ -1,4 +1,22 @@
 import java.util.Scanner;
+
 public class CheckPalindrome {
- public static void main(String[] args) { Scanner sc=new Scanner(System.in); String s=sc.next(); int l=0,r=s.length()-1; boolean ok=true; while(l<r)if(s.charAt(l++)!=s.charAt(r--)){ok=false;break;} System.out.println(ok?"Palindrome":"Not palindrome"); }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.next();
+        int left = 0;
+        int right = s.length() - 1;
+        boolean palindrome = true;
+
+        while (left < right) {
+            if (s.charAt(left) != s.charAt(right)) {
+                palindrome = false;
+                break;
+            }
+            left++;
+            right--;
+        }
+
+        System.out.println(palindrome ? "Palindrome" : "Not palindrome");
+    }
 }
