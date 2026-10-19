@@ -1,0 +1,2 @@
+import java.util.Scanner;
+public class ReplaceCharacterInString { public static void main(String[] args){Scanner sc=new Scanner(System.in);String s=sc.nextLine();char oldChar=sc.nextLine().charAt(0),newChar=sc.nextLine().charAt(0);System.out.println(s.replace(oldChar,newChar));} }
